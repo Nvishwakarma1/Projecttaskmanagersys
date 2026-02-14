@@ -1,0 +1,75 @@
+:root {
+  /* Light Theme */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border-color: #e2e8f0;
+  --accent-primary: #3b82f6;
+  --accent-hover: #2563eb;
+  --card-bg: #ffffff;
+  --header-bg: #ffffff;
+  --input-bg: #ffffff;
+  --button-bg: #0f172a;
+  --button-text: #ffffff;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+[data-theme="dark"] {
+  /* Dark Theme - Matte Black with Dodger Blue */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --bg-tertiary: #1a1a1a;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --border-color: #2a2a2a;
+  --accent-primary: #1e90ff;
+  --accent-hover: #1a7fe0;
+  --card-bg: #141414;
+  --header-bg: #0f0f0f;
+  --input-bg: #1a1a1a;
+  --button-bg: #1e90ff;
+  --button-text: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Utilities */
+.theme-bg-primary { background-color: var(--bg-primary); }
+.theme-bg-secondary { background-color: var(--bg-secondary); }
+.theme-bg-tertiary { background-color: var(--bg-tertiary); }
+.theme-bg-card { background-color: var(--card-bg); }
+.theme-bg-header { background-color: var(--header-bg); }
+.theme-bg-input { background-color: var(--input-bg); }
+.theme-text-primary { color: var(--text-primary); }
+.theme-text-secondary { color: var(--text-secondary); }
+.theme-text-muted { color: var(--text-muted); }
+.theme-border { border-color: var(--border-color); }
+.theme-accent { color: var(--accent-primary); }
+.theme-accent-bg { background-color: var(--accent-primary); }
+.theme-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+.theme-button:hover { opacity: 0.9; }

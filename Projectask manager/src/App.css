@@ -1,0 +1,127 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 80rem;
+  /* max-w-7xl */
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1rem;
+  /* px-4 py-8 */
+}
+
+@media (min-width: 640px) {
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding: 2rem 2rem;
+  }
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  /* text-2xl */
+  font-weight: 700;
+  /* font-bold */
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  font-size: 1rem;
+}
+
+.btn-add-task {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.625rem 1.25rem;
+  /* px-5 py-2.5 */
+  font-weight: 500;
+  border-radius: 0.5rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+  font-size: 1rem;
+}
+
+.btn-add-task:hover {
+  opacity: 0.9;
+}
+
+.btn-add-task:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-primary);
+}
+
+.app-footer {
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  margin-top: auto;
+  transition: background-color 0.3s;
+}
+
+.footer-content {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  /* text-sm */
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s;
+}
+
+.modal-container {
+  position: relative;
+  width: 100%;
+  max-width: 32rem;
+  /* max-w-lg */
+  transform: translateY(0);
+  transition: all 0.3s;
+  z-index: 51;
+}
